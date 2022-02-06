@@ -9,6 +9,12 @@ const List = ({ listTransactions, setListTransactions }) => {
   function removeTransaction(id) {
     setListTransactions(listTransactions.filter((item) => item.id != id));
   }
+  const listEntradas = listTransactions.filter(
+    (item) => item.type === "Entrada"
+  );
+
+  const listSaidas = listTransactions.filter((item) => item.type === "Saida");
+
   function FilterCards(filterSelec) {
     setFilter(filterSelec);
   }
@@ -51,19 +57,45 @@ const List = ({ listTransactions, setListTransactions }) => {
         </div>
       ) : (
         <div className="Card-list">
-          {listTransactions.map((transaction, index) => {
-            return (
-              <Card
-                key={index}
-                description={transaction.description}
-                type={transaction.type}
-                value={transaction.value}
-                id={transaction.id}
-                removeTransaction={removeTransaction}
-                filtro={Filter}
-              />
-            );
-          })}
+          {Filter === "Todos" &&
+            listTransactions.map((transaction, index) => {
+              return (
+                <Card
+                  key={index}
+                  description={transaction.description}
+                  type={transaction.type}
+                  value={transaction.value}
+                  id={transaction.id}
+                  removeTransaction={removeTransaction}
+                />
+              );
+            })}
+          {Filter === "Entrada" &&
+            listEntradas.map((transaction, index) => {
+              return (
+                <Card
+                  key={index}
+                  description={transaction.description}
+                  type={transaction.type}
+                  value={transaction.value}
+                  id={transaction.id}
+                  removeTransaction={removeTransaction}
+                />
+              );
+            })}
+          {Filter === "Saida" &&
+            listSaidas.map((transaction, index) => {
+              return (
+                <Card
+                  key={index}
+                  description={transaction.description}
+                  type={transaction.type}
+                  value={transaction.value}
+                  id={transaction.id}
+                  removeTransaction={removeTransaction}
+                />
+              );
+            })}
         </div>
       )}
     </section>
