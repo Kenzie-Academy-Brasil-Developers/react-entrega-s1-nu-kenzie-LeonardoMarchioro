@@ -1,0 +1,116 @@
+.svgs {
+  width: 600px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.svgs h2 {
+  font-family: Nunito;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #868e96;
+}
+.List-Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 15px;
+  width: 570px;
+}
+.List-Header h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.Nav-Filters {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-around;
+}
+.Nav-Filters button {
+  height: 40px;
+  width: 87px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px;
+  border: transparent;
+  color: #868e96;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.Nav-Filters button:hover {
+  background: #868e96;
+  color: #f8f9fa;
+}
+.Nav-Filters button:focus {
+  color: white;
+  background: #fd377e;
+}
+.Card-list {
+  width: 570px;
+  height: 500px;
+  background-color: white;
+  overflow: scroll;
+}
+@media only screen and (max-width: 1100px) {
+  .List-Header {
+    width: 400px;
+  }
+  .svgs {
+    width: 400px;
+  }
+  .Card-list {
+    width: 400px;
+  }
+  .Nav-Filters {
+    width: 425px;
+  }
+  .svgs svg {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .List {
+    margin-top: 20px;
+    width: 270px;
+  }
+  .List-Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 260px;
+  }
+  .Nav-Filters {
+    width: 250px;
+  }
+  .svgs {
+    width: 270px;
+  }
+  .svgs svg {
+    width: 270px;
+  }
+  .Nav-Filters button {
+    width: 70px;
+  }
+  .Card-list {
+    width: 270px;
+    margin-top: 20px;
+  }
+}

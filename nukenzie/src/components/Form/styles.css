@@ -1,12 +1,186 @@
 .Form {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  height: 351px;
+  width: 363px;
+  left: 258px;
+  top: 127px;
+  border-radius: 4px;
+  padding: 25px;
+  box-shadow: 0px 4px 32px -12px rgb(0 0 0 / 25%);
+}
+.Form label {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #212529;
+}
+.Form input {
+  bottom: 21%;
+  background: #f8f9fa;
+  border: 2px solid #f8f9fa;
+  box-sizing: border-box;
+  height: 52px;
+  width: auto;
+  left: 0px;
+  border-radius: 8px;
+  margin: 12px 0px;
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.Form input:focus {
+  background: #ffffff;
+  border: 2px solid #212529;
 }
 .Form span {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #868e96;
 }
 .boxSubmit {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  margin-top: 17px;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.valorInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.valorInput label {
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.valorInput input {
+  height: 48px;
+  width: 128px;
+  left: 0px;
+  top: 31px;
+  border-radius: 8px;
+}
+.entradaSelect {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 94px;
+}
+.entradaSelect label {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #212529;
+  text-align: left;
+}
+.entradaSelect select {
+  height: 48px;
+  width: 150px;
+  left: 0px;
+  top: 31px;
+  border-radius: 8px;
+  border: transparent;
+  margin-top: 12px;
+  background: #f8f9fa;
+  padding: 0px 16px;
+  color: #868e96;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.entradaSelect select-selected {
+  color: #868e96;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  height: 96px;
+  width: 128px;
+  left: 0px;
+  top: 0px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+.entradaSelect select-selected:after {
+  background: #e9ecef;
+}
+.Form button {
+  height: 48px;
+  width: auto;
+  left: 24.5px;
+  top: 265px;
+  border-radius: 8px;
+  border: transparent;
+  background: #fd377e;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  color: white;
+  margin-top: 33px;
+  margin-bottom: 52px;
+}
+.Form button:hover {
+  background: #e34981;
+}
+@media only screen and (max-width: 1100px) {
+  .Form {
+    width: 305px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .Form {
+    width: 250px;
+  }
+  .boxSubmit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .valorInput input {
+    width: 100px;
+  }
+  .entradaSelect {
+    width: 100px;
+  }
+  .entradaSelect select {
+    width: 100px;
+  }
+  .Form button {
+    width: 100%;
+  }
 }

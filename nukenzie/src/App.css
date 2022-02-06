@@ -1,15 +1,192 @@
-.App {
-  text-align: center;
-  margin: 50px;
-}
+/* HOME-PAGE */
 
-header {
-  background-color: #282c34;
-  height: 100px;
+.Home-Page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #212529;
+  display: flex;
+}
+.Esquerda {
+  width: 50vw;
+  height: 100vh;
+  background-color: #212529;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.Conteudo-Home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Titulo {
+  height: 25px;
+  width: 122px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  background: linear-gradient(90deg, #fd377e 29.84%, #ffffff 29.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Nunito", sans-serif;
+}
+.Frase {
+  height: 110px;
+  width: 228px;
+  left: 256px;
+  top: 264px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+.Span-Frase {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  color: white;
+  text-align: left;
+}
+.Home-Button {
+  background: #fd377e;
+  height: 48px;
+  width: 241px;
+  left: 256px;
+  top: 490px;
+  border-radius: 8px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  color: white;
+  border: transparent;
+  margin: 15px 0px;
+  font-family: "Inter", sans-serif;
+}
+.Home-Button:hover {
+  left: 164px;
+  top: 20px;
+  border-radius: 8px;
+  padding: 13px, 20px, 13px, 20px;
+  background: #e34981;
+  cursor: pointer;
+}
+
+.Direita {
+  background-image: url("../public/home.png");
+  width: 50vw;
+  background-repeat: no-repeat;
+  background-size: 50vmax;
+  background-position: center;
+}
+
+/* APP-PAGE */
+
+.APP-Body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.Header-APP {
+  background: #f8f9fa;
+  height: 88px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 0% 10%;
+  box-shadow: 0px 4px 32px -12px rgb(0 0 0 / 25%);
+}
+.Logo {
+  background: linear-gradient(90deg, #fd377e 29.84%, #000000 29.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+}
+.Back-Home-Button {
+  border: transparent;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  height: 40px;
+  width: 64px;
+  left: 0px;
+  top: 0px;
+  color: #868e96;
+  background: #e9ecef;
+  border-radius: 8px;
+}
+.Back-Home-Button:hover {
+  color: #e9ecef;
+  background: #868e96;
+  cursor: pointer;
+}
+.Main-APP {
+  margin: 5% 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.boxEsquerda {
+  display: flex;
+  flex-direction: column;
+}
+.boxDireita {
+  padding: 0px 25px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .boxEsquerda {
+    margin: 0px 19px 0px 5px;
+  }
+  .boxDireita {
+    padding: 0px;
+    margin: 0px 19px 0px 5px;
+  }
+  .Main-APP {
+    margin: 5% 0%;
+    justify-content: center;
+  }
+  .Esquerda {
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .Header-APP {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  .Main-APP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxEsquerda {
+    margin: 0px;
+    width: 300px;
+  }
+  .boxDireita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+  .Home-Page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Direita {
+    display: none;
+  }
 }

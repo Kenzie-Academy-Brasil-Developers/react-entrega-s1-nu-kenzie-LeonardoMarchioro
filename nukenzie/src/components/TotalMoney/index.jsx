@@ -1,13 +1,19 @@
+import "./styles.css";
+
 const TotalMoney = ({ listTransactions }) => {
-  const value = listTransactions.reduce((itemAnt, itemAtual) => {
-    return itemAnt + parseFloat(itemAtual.value);
-  }, 0);
+  const value = listTransactions
+    .filter((item) => item.type === "Entrada")
+    .reduce((itemAnt, itemAtual) => {
+      return itemAnt + parseFloat(itemAtual.value);
+    }, 0);
 
   return (
-    <div>
-      <span>Valor total:</span>
-      <span>$ {value.toFixed(2)}</span>
-    </div>
+    listTransactions.length !== 0 && (
+      <div className="Total-Money">
+        <span>Valor total:</span>
+        <span>$ {value.toFixed(2)}</span>
+      </div>
+    )
   );
 };
 

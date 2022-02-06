@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Card from "../Card";
+import SVG from "../SVG";
+import "./styles.css";
 
 const List = ({ listTransactions, setListTransactions }) => {
   const [Filter, setFilter] = useState("Todos");
@@ -43,19 +45,27 @@ const List = ({ listTransactions, setListTransactions }) => {
         </nav>
       </div>
 
-      {listTransactions.map((transaction, index) => {
-        return (
-          <Card
-            key={index}
-            description={transaction.description}
-            type={transaction.type}
-            value={transaction.value}
-            id={transaction.id}
-            removeTransaction={removeTransaction}
-            filtro={Filter}
-          />
-        );
-      })}
+      {listTransactions.length === 0 ? (
+        <div className="svgs">
+          <SVG />
+        </div>
+      ) : (
+        <div className="Card-list">
+          {listTransactions.map((transaction, index) => {
+            return (
+              <Card
+                key={index}
+                description={transaction.description}
+                type={transaction.type}
+                value={transaction.value}
+                id={transaction.id}
+                removeTransaction={removeTransaction}
+                filtro={Filter}
+              />
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 };

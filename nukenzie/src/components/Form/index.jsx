@@ -4,7 +4,7 @@ import { useState } from "react";
 const Form = ({ listTransactions, setListTransactions }) => {
   const [description, setDescription] = useState("");
   const [type, setType] = useState("Entrada");
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState();
   const [id, setId] = useState(0);
 
   function addTransaction() {
@@ -36,9 +36,9 @@ const Form = ({ listTransactions, setListTransactions }) => {
           <label>Valor</label>
           <input
             type={"Number"}
-            placeholder="Valor"
+            placeholder="R$"
             onChange={(event) => {
-              setValue(event.target.value);
+              setValue(parseFloat(event.target.value));
             }}
           />
         </div>

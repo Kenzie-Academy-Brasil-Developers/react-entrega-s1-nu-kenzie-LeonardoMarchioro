@@ -1,14 +1,20 @@
-const Card = ({ description, type, value, id, removeTransaction, filtro }) => {
+import "./styles.css";
+
+const Card = ({ description, type, value, id, removeTransaction }) => {
+  const newValue = value.toFixed(2);
+
   return (
     <div id={id} className={type === "Entrada" ? "cardEntrada" : "cardSaida"}>
-      <h2 className="description">{description}</h2>
-      <span className="type">{type}</span>
-      <span className="value">{value}</span>
+      <div className="types">
+        <h2 className="description">{description}</h2>
+        <span className="type">{type}</span>
+      </div>
+
+      <span className="value">R$ {newValue}</span>
       <button
+        className="button-remove"
         onClick={(event) => removeTransaction(event.target.parentNode.id)}
-      >
-        X
-      </button>
+      ></button>
     </div>
   );
 };
