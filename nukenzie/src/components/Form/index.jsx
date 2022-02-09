@@ -4,20 +4,21 @@ import { useState } from "react";
 const Form = ({ listTransactions, setListTransactions }) => {
   const [description, setDescription] = useState("");
   const [type, setType] = useState("Entrada");
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(0);
   const [id, setId] = useState(0);
 
   function addTransaction() {
     setId(id + 1);
-    setListTransactions([
-      ...listTransactions,
-      {
-        description: description,
-        type: type,
-        value: value,
-        id: id,
-      },
-    ]);
+    description.length > 0 &&
+      setListTransactions([
+        ...listTransactions,
+        {
+          description: description,
+          type: type,
+          value: value,
+          id: id,
+        },
+      ]);
   }
 
   return (
