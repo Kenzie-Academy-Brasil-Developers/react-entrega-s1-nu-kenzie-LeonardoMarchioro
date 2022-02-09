@@ -7,8 +7,11 @@ const List = ({ listTransactions, setListTransactions }) => {
   const [Filter, setFilter] = useState("Todos");
 
   function removeTransaction(id) {
-    setListTransactions(listTransactions.filter((item) => item.id != id));
+    setListTransactions(
+      listTransactions.filter((item) => item.id !== parseInt(id))
+    );
   }
+
   const listEntradas = listTransactions.filter(
     (item) => item.type === "Entrada"
   );
